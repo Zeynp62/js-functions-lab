@@ -250,12 +250,32 @@ Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
 
 Complete the exercise in the space below:
 */
-
+/*
 const createUsername = (firstName, lastName) => {
   let count = firstName.length + lastName.length
   let theName = firstName.substring(0, 3) + lastName.substring(0, 3)
   let username = `${theName}${count}`
   return username
+}*/
+
+const createUsername = (firstName, lastName) => {
+  /*let count = firstName.length + lastName.length
+  let username =
+    firstName[0] +
+    firstName[1] +
+    firstName[2] +
+    lastName[0] +
+    lastName[1] +
+    lastName[2] +
+    count*/
+  let count = firstName.length + lastName.length
+  let fName = ''
+  let lName = ''
+  for (let i = 0; i <= 2; i++) {
+    fName += firstName[i]
+    lName += lastName[i]
+  }
+  return fName + lName + count
 }
 
 console.log('Exercise 11 Result:', createUsername('Samantha', 'Green'))
