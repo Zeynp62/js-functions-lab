@@ -159,9 +159,11 @@ Complete the exercise in the space below:
 */
 const convertTemperature = (temp, char) => {
   if (char === 'F') {
-    return (5 / 9) * (temp - 32)
+    let value = (5 / 9) * (temp - 32)
+    return ` ${value} (Celsius)`
   } else if (char === 'C') {
-    return (9 / 5) * temp + 32
+    let value = (9 / 5) * temp + 32
+    return `${value} (Fahrenheit)`
   } else {
     console.log('invalid input')
   }
@@ -232,3 +234,28 @@ const calculateGrade = (score) => {
 }
 
 console.log('Exercise 10 Result:', calculateGrade(85))
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+const createUsername = (firstName, lastName) => {
+  let count = firstName.length + lastName.length
+  let theName = firstName.substring(0, 3) + lastName.substring(0, 3)
+  let username = `${theName}${count}`
+  return username
+}
+
+console.log('Exercise 11 Result:', createUsername('Samantha', 'Green'))
